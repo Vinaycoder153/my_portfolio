@@ -1,73 +1,93 @@
-# Welcome to your Lovable project
+# 🌐 VINAY M Y — Professional Portfolio Website
 
-## Project info
+A **fully responsive and creatively designed portfolio website** built to showcase my skills, projects, education, and achievements as a **Frontend & Full-Stack Developer**.  
+This site reflects my passion for clean UI design, performance optimization, and modern web technologies.
 
-**URL**: https://lovable.dev/projects/a7584765-221a-4391-bb1c-af761e94c9bc
+---
 
-## How can I edit this code?
+## 🚀 Live Demo
+👉 [View Portfolio](https://vinaycoder153.github.io/my_portfolio) *(Replace with your actual deployed link)*
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🧑‍💻 About Me
+Hi, I'm **Vinay M Y** from Hassan, Karnataka — a passionate **Frontend & Full-Stack Developer** with a strong foundation in:
+- Building modern, responsive web apps
+- Crafting elegant UI/UX designs
+- Integrating APIs and backend systems  
+- Exploring cloud and generative AI technologies
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a7584765-221a-4391-bb1c-af761e94c9bc) and start prompting.
+I love solving problems, learning new tools, and creating meaningful digital experiences.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+| Category | Technologies |
+|-----------|---------------|
+| **Frontend** | HTML, CSS, Bootstrap, JavaScript, React |
+| **Backend** | Node.js, Express.js, Python |
+| **Database** | SQLite, SQL |
+| **Other Tools** | Git, VS Code, GCP, OOP, Responsive Design |
+| **Soft Skills** | Problem-Solving, Creativity, Adaptability, Teamwork |
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📂 Sections Included
+- **Hero Section:** Introduction, tagline, and social/contact links  
+- **About Me:** Career objective and personal background  
+- **Skills:** Categorized list with animated skill bars  
+- **Education:** Timeline of academic milestones  
+- **Projects:** Interactive project cards with tech stack and live links  
+- **Achievements & Certifications:** Hackathon win and verified credentials  
+- **Contact:** Integrated contact form (EmailJS/FormSubmit)  
+- **Footer:** Social icons and copyright  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🏗️ Features
+✨ Fully Responsive (Mobile, Tablet, Laptop)  
+🎨 Professional glowing gradient theme  
+⚡ Smooth scroll and hover animations  
+🧠 SEO-friendly and fast loading  
+🧩 Modular code structure  
+🔗 Easy to customize and expand  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 📸 Projects Showcased
+1. **Portfolio Website** – Built with React, Bootstrap, and CSS  
+2. **Todos Application** – CRUD-based persistent todo app  
+3. **My Projects Page** – Responsive Flexbox layout  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🏆 Achievements
+🥇 **1st Place – 24-Hour Online Dasara Hackathon (Mipzo EdTech Pvt. Ltd.)**  
+Demonstrated teamwork, rapid prototyping, and innovative problem-solving.  
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📜 Certifications
+- AWS Educate – Introduction to Generative AI  
+- AWS Educate – Machine Learning Foundations  
+- NxtWave – Build Dynamic Web Applications  
+- Google Cloud Skills Boost – Generative AI & Gemini  
+- NxtWave – Programming Foundations (Python)  
+- Google – Prompt Design in Vertex AI  
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## ⚙️ Installation & Usage
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+# Clone this repository
+git clone https://github.com/vinaycoder153/my_portfolio.git
 
-## How can I deploy this project?
+# Navigate into the folder
+cd my_portfolio
 
-Simply open [Lovable](https://lovable.dev/projects/a7584765-221a-4391-bb1c-af761e94c9bc) and click on Share -> Publish.
+# Open in your code editor (VS Code)
+code .
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+# Run locally (open index.html)
