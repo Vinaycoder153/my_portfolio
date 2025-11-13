@@ -27,11 +27,14 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20">
-      <div className="container mx-auto px-4">
+    <section id="education" className="py-20 relative overflow-hidden">
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Education</h2>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 gradient-text-animated">Education</h2>
+          <p className="text-muted-foreground text-lg mb-4">Academic excellence & continuous learning</p>
+          <div className="w-24 h-1.5 gradient-primary mx-auto rounded-full glow-border" />
         </div>
 
         <div className="max-w-4xl mx-auto space-y-6">
@@ -40,24 +43,27 @@ const Education = () => {
             return (
               <Card
                 key={index}
-                className="p-6 hover:glow-border transition-all duration-300 bg-card/50 backdrop-blur-sm relative overflow-hidden group"
+                className="p-8 hover-lift glass-effect hover:glow-border-accent transition-all duration-500 relative overflow-hidden group"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-6 h-6 text-primary" />
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 glow-border">
+                      <Icon className="w-8 h-8 text-primary" />
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <h3 className="text-xl font-semibold mb-1">{edu.degree}</h3>
-                    <p className="text-primary font-medium mb-2">{edu.institution}</p>
-                    <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                      <span>{edu.period}</span>
-                      <span className="font-semibold text-accent">{edu.score}</span>
+                    <h3 className="text-2xl font-bold mb-2 group-hover:gradient-text transition-all duration-300">{edu.degree}</h3>
+                    <p className="text-primary font-semibold mb-3 text-lg">{edu.institution}</p>
+                    <div className="flex flex-wrap gap-4 text-sm">
+                      <span className="px-3 py-1 rounded-full bg-muted/50 text-muted-foreground">{edu.period}</span>
+                      <span className="px-4 py-1 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 text-accent font-bold border border-accent/30">{edu.score}</span>
                     </div>
                   </div>
                 </div>
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl -z-10 group-hover:bg-primary/10 transition-colors" />
+                
+                {/* Animated Background Elements */}
+                <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-accent/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ transitionDelay: '100ms' }} />
               </Card>
             );
           })}

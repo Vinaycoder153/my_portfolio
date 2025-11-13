@@ -34,7 +34,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
+      {/* Animated Background with Multiple Layers */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -45,17 +45,32 @@ const Hero = () => {
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background z-0" />
+      
+      {/* Animated Grid Overlay */}
+      <div className="absolute inset-0 z-0 opacity-20" style={{
+        backgroundImage: `linear-gradient(hsl(var(--primary) / 0.1) 1px, transparent 1px), 
+                         linear-gradient(90deg, hsl(var(--primary) / 0.1) 1px, transparent 1px)`,
+        backgroundSize: '50px 50px',
+        animation: 'grid-move 20s linear infinite'
+      }} />
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-4 glow-text">
+        <div className="animate-slide-up" style={{ animationDelay: '0.1s' }}>
+          <div className="mb-6">
+            <div className="inline-block px-6 py-2 rounded-full glass-effect border border-primary/30 mb-6 animate-pulse-glow">
+              <span className="text-sm md:text-base text-primary font-medium">✨ Available for Opportunities</span>
+            </div>
+          </div>
+          
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 glow-text tracking-tight">
             VINAY M Y
           </h1>
-          <div className="h-16 md:h-20 mb-6">
-            <p className="text-2xl md:text-4xl gradient-text font-semibold">
+          
+          <div className="h-16 md:h-20 mb-8">
+            <p className="text-3xl md:text-5xl gradient-text-animated font-bold">
               {displayedRole}
-              <span className="animate-pulse">|</span>
+              <span className="animate-pulse text-accent">|</span>
             </p>
           </div>
 
@@ -76,38 +91,52 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <Button variant="default" size="lg" className="glow-border" asChild>
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
+            <Button variant="default" size="lg" className="glow-border hover-lift group relative overflow-hidden" asChild>
               <a href="https://vinay1portfolio.ccbp.tech" target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="mr-2 h-4 w-4" />
-                View Portfolio
+                <span className="relative z-10 flex items-center">
+                  <ExternalLink className="mr-2 h-5 w-5" />
+                  View Portfolio
+                </span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hover-lift border-primary/30 hover:border-primary/60 hover:bg-primary/10" asChild>
               <a href="https://linkedin.com/in/vinay-m-y" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" />
+                <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="hover-lift border-accent/30 hover:border-accent/60 hover:bg-accent/10" asChild>
               <a href="https://github.com/vinay-m-y" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-4 w-4" />
+                <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
             </Button>
           </div>
 
-          <div className="max-w-3xl mx-auto">
-            <Button variant="secondary" size="lg" className="animate-glow" asChild>
-              <a href="#contact">Get In Touch</a>
+          <div className="max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: '0.4s' }}>
+            <Button variant="secondary" size="lg" className="animate-glow hover-lift text-lg px-8 py-6" asChild>
+              <a href="#contact">
+                <Mail className="mr-2 h-5 w-5" />
+                Get In Touch
+              </a>
             </Button>
           </div>
         </div>
       </div>
 
-      {/* Decorative Elements */}
+      {/* Enhanced Decorative Elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-secondary/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }} />
+      
+      <style>{`
+        @keyframes grid-move {
+          0% { transform: translateY(0); }
+          100% { transform: translateY(50px); }
+        }
+      `}</style>
     </section>
   );
 };

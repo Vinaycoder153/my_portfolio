@@ -1,7 +1,7 @@
-import { Card } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { ExternalLink } from 'lucide-react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ExternalLink, Sparkles } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -26,34 +26,76 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 gradient-text">Projects</h2>
-          <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-effect border border-primary/30 mb-6">
+            <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+            <span className="text-sm font-medium text-primary">Portfolio Highlights</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-4 gradient-text-animated">Featured Projects</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-4">
+            Showcasing innovative solutions and creative development work
+          </p>
+          <div className="w-24 h-1.5 gradient-primary mx-auto rounded-full glow-border" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <Card
               key={index}
-              className="p-6 hover:glow-border transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm flex flex-col"
+              className="group hover-lift glass-effect hover:glow-border-accent transition-all duration-500 overflow-hidden relative"
             >
-              <h3 className="text-2xl font-semibold mb-3 text-primary">{project.title}</h3>
-              <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((tech, techIndex) => (
-                  <Badge key={techIndex} variant="outline" className="bg-primary/10 text-primary border-primary/20">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-              <Button variant="default" className="w-full glow-border" asChild>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  <ExternalLink className="mr-2 h-4 w-4" />
-                  View Project
-                </a>
-              </Button>
+              {/* Card Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardHeader className="relative z-10">
+                <div className="flex items-start justify-between mb-2">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center glow-border">
+                    <ExternalLink className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div className="w-3 h-3 rounded-full bg-accent animate-pulse" />
+                </div>
+                <CardTitle className="text-2xl font-bold group-hover:gradient-text transition-all duration-300">
+                  {project.title}
+                </CardTitle>
+                <CardDescription className="text-muted-foreground leading-relaxed mt-2">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+              
+              <CardContent className="relative z-10">
+                <div className="space-y-4">
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((tech, techIndex) => (
+                      <Badge 
+                        key={techIndex} 
+                        variant="secondary" 
+                        className="text-xs font-medium px-3 py-1 bg-primary/10 text-primary border-primary/30 hover:bg-primary/20 transition-colors"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full group/btn border-primary/40 hover:bg-primary/10 hover:border-primary/60 transition-all duration-300" 
+                    asChild
+                  >
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                      <span className="flex items-center">
+                        <ExternalLink className="mr-2 h-4 w-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform duration-300" />
+                        View Live Project
+                      </span>
+                    </a>
+                  </Button>
+                </div>
+              </CardContent>
             </Card>
           ))}
         </div>
