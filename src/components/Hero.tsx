@@ -93,7 +93,7 @@ const Hero = () => {
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <Button variant="default" size="lg" className="glow-border hover-lift group relative overflow-hidden" asChild>
-              <a href="https://vinay1portfolio.ccbp.tech" target="_blank" rel="noopener noreferrer">
+              <a href="vinay1portfolio.ccbp.tech" target="_blank" rel="noopener noreferrer">
                 <span className="relative z-10 flex items-center">
                   <ExternalLink className="mr-2 h-5 w-5" />
                   View Portfolio
@@ -102,7 +102,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" className="hover-lift border-primary/30 hover:border-primary/60 hover:bg-primary/10" asChild>
-              <a href="https://linkedin.com/in/vinay-m-y" target="_blank" rel="noopener noreferrer">
+              <a href="www.linkedin.com/in/vinaymy21" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
