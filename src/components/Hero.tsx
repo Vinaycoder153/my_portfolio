@@ -108,7 +108,7 @@ const Hero = () => {
               </a>
             </Button>
             <Button variant="outline" size="lg" className="hover-lift border-accent/30 hover:border-accent/60 hover:bg-accent/10" asChild>
-              <a href="https://github.com/vinay-m-y" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Vinaycoder153" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
