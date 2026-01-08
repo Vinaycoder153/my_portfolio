@@ -6,7 +6,7 @@ This site reflects my passion for clean UI design, performance optimization, and
 ---
 
 ## 🚀 Live Demo
-👉 [View Portfolio](https://vinaycoder153.github.io/my_portfolio) *(Replace with your actual deployed link)*
+👉 [View Portfolio](https://myportfolio236.netlify.app/) *(Replace with your actual deployed link)*
 
 ---
 
